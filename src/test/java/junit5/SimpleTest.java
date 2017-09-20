@@ -18,7 +18,7 @@ public class SimpleTest {
 	@DisplayName(";-)")
 	@Tag("wichtig") 	@Tag("mathematisch")
 	void foo(TestInfo ti) {
-		assertTrue(.9 == (float).8 + .1, () -> "Addition kaputt" );
+		assertTrue(3 == 2+1, () -> "Addition kaputt" );
 		out("Tags: " + ti.getTags());
 	}
 	
