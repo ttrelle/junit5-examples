@@ -1,5 +1,6 @@
 package junit5;
 
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -20,6 +21,18 @@ public class SimpleTest {
 	void foo(TestInfo ti) {
 		assertTrue(3 == 2+1, () -> "Addition kaputt" );
 		out("Tags: " + ti.getTags());
+	}
+	
+	@Test
+	void expectException() {
+		// gegeben sei
+		String n = null;
+		
+		// dann
+		assertThrows(NullPointerException.class,
+				// wenn
+				() -> n.toString()
+		);
 	}
 	
 	static void out(Object o) {
