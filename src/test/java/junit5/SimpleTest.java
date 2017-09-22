@@ -1,6 +1,7 @@
 package junit5;
 
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -12,30 +13,21 @@ import org.junit.jupiter.api.TestInfo;
 public class SimpleTest {
 
 	@BeforeEach void setUp(TestInfo ti) {
-		out(ti.getDisplayName());
+		System.out.println(ti.getDisplayName());
 	}
 	
+//	@Disabled	
 	@Test 
 	@DisplayName(";-)")
-	@Tag("wichtig") 	@Tag("mathematisch")
+	@Tag("mathematisch")
+	@Tag("wichtig") 
 	void foo(TestInfo ti) {
 		assertTrue(3 == 2+1, () -> "Addition kaputt" );
-		out("Tags: " + ti.getTags());
+		System.out.println("Tags: " + ti.getTags());
 	}
 	
 	@Test
-	void expectException() {
-		// gegeben sei
-		String n = null;
-		
-		// dann
-		assertThrows(NullPointerException.class,
-				// wenn
-				() -> n.toString()
-		);
-	}
-	
-	static void out(Object o) {
-		System.out.println(o);
+	void hamcrestMatcher() {
+		assertThat( 1 + 2, is(3) );
 	}
 }
