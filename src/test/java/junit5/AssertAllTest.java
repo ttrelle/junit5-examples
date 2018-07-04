@@ -5,9 +5,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
-/**
- * @author xd99326
- */
 public class AssertAllTest {
 
     @Test
@@ -21,8 +18,10 @@ public class AssertAllTest {
     @Test
     void testAll(TestInfo ti) {
         assertAll( //
+            "*Alle* Assertions werden durchlaufen", //
             () -> assertEquals(0, 1), //
             () -> assertEquals(2, 2), //
+            () -> assertEquals(3, 4), //
             () -> print(ti.getDisplayName() + " fertig.")//
         );
     }
