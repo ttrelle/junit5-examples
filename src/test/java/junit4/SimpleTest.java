@@ -2,7 +2,7 @@ package junit4;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.Assert.assertEquals;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -33,7 +33,7 @@ public class SimpleTest {
     @Test
     @Category({Mathematisch.class, Wichtig.class})
     public void foo() {
-        assertTrue(3 == 2 + 1, () -> "Addition kaputt");
+        assertEquals("Addition kaputt", 3, 2 + 1);
     }
 
     @Ignore
