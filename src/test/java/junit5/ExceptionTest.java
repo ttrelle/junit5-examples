@@ -3,7 +3,7 @@ package junit5;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.Test;
 
-public class ExceptionTest {
+class ExceptionTest {
 
     @Test
     void expectException() {

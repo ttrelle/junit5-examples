@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertTimeout;
 import java.time.Duration;
 import org.junit.jupiter.api.Test;
 
-public class TimeoutTest {
+class TimeoutTest {
 
     @Test
     void timeout() {

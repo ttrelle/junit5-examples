@@ -13,7 +13,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
-public class SimpleTest {
+class SimpleTest {
 
     @BeforeAll
     static void einmal() {
