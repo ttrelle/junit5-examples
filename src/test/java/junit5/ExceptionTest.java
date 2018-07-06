@@ -11,9 +11,10 @@ class ExceptionTest {
         String n = null;
 
         // dann
-        assertThrows(NullPointerException.class,
+        NullPointerException npe = assertThrows(NullPointerException.class,
             // wenn
             () -> n.toString());
+        // assertEquals(npe.getLocalizedMessage(), "irgendwas");
     }
 
 }

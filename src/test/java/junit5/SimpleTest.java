@@ -2,7 +2,7 @@ package junit5;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -30,7 +30,7 @@ class SimpleTest {
     @Tag("mathematisch")
     @Tag("wichtig")
     void foo(TestInfo ti) {
-        assertTrue(3 == 2 + 1, () -> "Addition kaputt");
+        assertEquals(3, 2 + 1, () -> "Addition kaputt");
         print("\t\tTags: " + ti.getTags());
     }
 
