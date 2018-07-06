@@ -26,7 +26,7 @@ class SimpleTest {
     }
 
     @Test
-    @DisplayName(";-)")
+    @DisplayName("1 + 2 = 3")
     @Tag("mathematisch")
     @Tag("wichtig")
     void foo(TestInfo ti) {

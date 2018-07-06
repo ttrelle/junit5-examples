@@ -12,7 +12,7 @@ class Multiplizierer {
         int result = 0;
 
         for (int i = 0; i < a; i++) {
-            result += addierer.addiere(0, b);
+            result = addierer.addiere(result, b);
         }
 
         return result;
